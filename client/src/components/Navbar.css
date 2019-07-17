@@ -20,7 +20,7 @@ ul.nav li a.active {
 ul.nav li a:hover {
   background-color: #fff;
   color: #000;
-  border-style:double;
+  border-style: double;
   text-decoration: none;
 }
 .active {
@@ -44,7 +44,7 @@ ul.nav li a:hover {
     width: 100%;
     text-align: center;
     color: black;
-    border-style:double;
+    border-style: double;
     padding: 0.5rem 3.6rem;
   }
   ul.nav{
@@ -53,7 +53,7 @@ ul.nav li a:hover {
   ul.nav li a:hover {
     background-color: #000;
     color: #fff;
-    border-style:double;
+    border-style: double;
     text-decoration: none;
   }
 }

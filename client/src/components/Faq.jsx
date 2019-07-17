@@ -6,11 +6,11 @@ import PropTypes from 'prop-types';
 import './Faq.css';
 
 export const Faq = (props) => {
-  const [selected, setSelected] = useState();
+  const [ selected, setSelected ] = useState();
 
   const showFaqs = () => {
     const { data: { loading, faqs } } = props;
-    if ( loading ) {
+    if (loading) {
       return ( <div><p>Loading...</p></div> )
     }
     return faqs.map(faq => {

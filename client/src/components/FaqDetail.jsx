@@ -8,10 +8,10 @@ export const FaqDetail = (props) => {
     const { faq } = props.data;
       if (faq) {
         return (
-          <React.Fragment>
+          <div>
             <h4>{ faq.title }</h4>
             <div dangerouslySetInnerHTML={{__html: faq.body}} />
-          </React.Fragment>
+          </div>
         )
       }
     }

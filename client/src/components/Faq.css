@@ -1,8 +1,8 @@
-h1.faq-header{
+h1.faq-header {
   letter-spacing: normal;
   color: yellow;
 }
-#faq-list{
+#faq-list {
   position: fixed;
   right: 0;
   width: 40%;
@@ -20,7 +20,7 @@ h1.faq-header{
 }
 .faq-list {
   margin: 20px;
-  list-style:square;
+  list-style: square;
   border-radius: 4px;
   box-shadow: 1px 3px 5px rgba(200,200,0,0.3);
 }
@@ -32,10 +32,10 @@ h1.faq-header{
 }
 
 @media screen and (max-width: 400px) {
-  h1.faq-header{
+  h1.faq-header {
     font-size: 1.5rem;
   }
-  #faq-list{
+  #faq-list {
     width: 100%;
     height: auto;
     padding: 10px;

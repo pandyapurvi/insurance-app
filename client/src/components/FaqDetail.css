@@ -7,16 +7,16 @@
   color: #880E4F;
   text-align: justify;
   width: 60%;
-  float: left;
   background-color:#eee;
   height: 100%;
   position: fixed;
   top: 20%;
-  left:0;
+  left: 0;
   overflow: auto;
 }
+
 @media screen and (max-width: 400px) {
-  #faq-detail{
+  #faq-detail {
   position: fixed;
   background-position: bottom;
   top: 25rem;

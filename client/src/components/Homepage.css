@@ -18,20 +18,20 @@
         transform: translate(0);
     }
 }
-h1{
-display: block;
-font-size: 3rem;
-font-weight: 400;
-letter-spacing: 0.5rem;
-animation-name: moveInLeft;
-animation-duration: 1.5s;
-animation-timing-function: ease-out;
-color: red;
-text-transform: uppercase;
-margin-bottom: 2rem;
-font-family: 'Literata', serif, sans-serif;
-margin-top: 1rem;
-text-align: center;
+h1 {
+  display: block;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+  animation-name: moveInLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  color: red;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-family: 'Literata', serif, sans-serif;
+  margin-top: 1rem;
+  text-align: center;
 }
 h4 {
   font-family: 'Satisfy', cursive, sans-serif;
@@ -56,7 +56,7 @@ img {
   text-decoration: none;
   transition: all .2s;
   font-size: 1rem;
-  border-style:double;
+  border-style: double;
   color: black;
   width: 25rem;
   text-align: center;
@@ -71,9 +71,9 @@ img {
   img {
     height: 18rem;
   }
-  h1{
-  font-size: 2rem;
-  letter-spacing: 0.1rem;
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
   }
   .learn-more:link,
   .learn-more:visited {
@@ -94,9 +94,9 @@ img {
     margin-bottom: 1.5rem;
     height: 12rem;
   }
-  h1{
-  font-size: 1.5rem;
-  letter-spacing: 0.1rem;
+  h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
   }
   .learn-more:link,
   .learn-more:visited {
