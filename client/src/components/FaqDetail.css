@@ -1,0 +1,36 @@
+#faq-detail {
+  display: inline-block;
+  padding: 30px;
+  text-align: left;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  color: #880E4F;
+  text-align: justify;
+  width: 60%;
+  float: left;
+  background-color:#fff;
+  height: 100%;
+  position: fixed;
+  top: 20%;
+  left:0;
+  overflow: auto;
+}
+@media screen and (max-width: 400px) {
+
+  #faq-detail{
+  position: fixed;
+  background-position: bottom;
+  top: 25rem;
+  height: 40%;
+  width: 100%;
+
+  }
+  h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  p{
+
+    font-weight: bold;
+  }
+}

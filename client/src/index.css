@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Literata|Satisfy&display=swap');
+font-family: 'Indie Flower', cursive;
+
 body {
   background-color: #eee;
   font-family: "Halvetica", sans-serif;
@@ -5,56 +8,12 @@ body {
 li {
   list-style: none;
 }
+
 #main {
-  color: #444;
-  text-align: center;
-  padding: 0;
-  box-sizing: border-box;
-  width: 60%;
-  height: 100%;
+  width: 100%;
+  position: relative;
 }
-
-/* #faq-detail {
-  padding: 0;
-
+/* .faq-component {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 } */
-
-#faq-detail {
-  display: inline-block;
-  margin: 12px;
-  padding: 10px;
-  text-align: left;
-  font-size: 18px;
-  letter-spacing: 0.5px;
-  border: 1px solid #880E4F;
-  border-radius: 4px;
-  box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
-  color: #880E4F;
-  text-align: justify;
-}
-
-#faq-list {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 40%;
-  height: 100%;
-  background-color: #999;
-  padding: 30px;
-  overflow: auto;
-  box-shadow: -2px -3px 5px rgba(0,0,0,0.3);
-  box-sizing: border-box;
-  color: #fff;
-  text-align: left;
-
-  cursor: pointer;
-  line-height: 30px;
-  font-size: 18px;
-  font-weight: bold;
-}
-.faq-list {
-  margin: 20px;
-  list-style: lower-latin;
-  border-radius: 4px;
-  box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
-}

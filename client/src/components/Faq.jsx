@@ -1,49 +1,44 @@
 import React,  { Component } from 'react';
 import { graphql } from 'react-apollo';
 import { getFaqQuery } from '../queries/queries';
-
-
 import FaqDetail from './FaqDetail';
+import styles from './Faq.css';
 
-
-class Faq extends Component {
+export class Faq extends Component {
   constructor(props) {
     super(props);
-      this.state = {
-        selected: null
-      }
+    this.state = {
+      selected: ''
+    }
   }
 
   showFaqs(){
-    var data = this.props.data;
-    if( data.loading){
-      return (<div>Loading...</div>)
-    } else {
-      return data.faqs.map(faq => {
-        return (
-          <li className="faq-list" key={faq.id} onClick={ (e) => {this.setState({selected: faq.id})}}>{faq.title}</li>
-        )
-      })
+    const { data: { loading, faqs } } = this.props;
+    if ( loading ) {
+      return ( <div><p>Loading...</p></div> )
     }
-  }
+    return faqs.map(faq => {
+      return (
+        <li className="faq-list" key={ faq.id } onClick={ (e) => { this.setState({ selected: faq.id }) }}>
+        { faq.title }
+        </li>
+      )
+    })
+  };
+
   render() {
-    //console.log(this.props);
-
     return(
-      <div>
-
-
+      <main>
+      <div className="faq-container" >
         <ul id="faq-list">
-        <h1>FAQ</h1>
-
-            {this.showFaqs()}
-
+        <h1 className="faq-header">FAQ</h1>
+          { this.showFaqs() }
         </ul>
-        <FaqDetail faqid={this.state.selected}/>
+        <FaqDetail faqid={ this.state.selected } />
       </div>
-
+    </main>
     )
   }
 };
 
-export default graphql(getFaqQuery)(Faq);
+export default graphql( getFaqQuery )( Faq );
