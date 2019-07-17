@@ -2,6 +2,7 @@ import React,  { useState } from 'react';
 import { graphql } from 'react-apollo';
 import { getFaqQuery } from '../queries/queries';
 import FaqDetail from './FaqDetail';
+import PropTypes from 'prop-types';
 import './Faq.css';
 
 export const Faq = (props) => {
@@ -32,6 +33,17 @@ export const Faq = (props) => {
       </div>
     </main>
   )
+};
+
+Faq.propTypes = {
+  data: PropTypes.shape({
+    loading: PropTypes.bool.isRequired,
+    faqs: PropTypes.arrayOf(PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      body: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+    }))
+  })
 };
 
 export default graphql( getFaqQuery )( Faq );

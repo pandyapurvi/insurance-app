@@ -1,10 +1,11 @@
-import React,  { Component } from 'react';
+import React from 'react';
 import { graphql } from 'react-apollo';
 import { getFaqDetailQuery } from '../queries/queries';
 import './FaqDetail.css';
-export class FaqDetail extends Component {
-  displayFaqDetail() {
-    const { faq } = this.props.data;
+
+export const FaqDetail = (props) => {
+  const displayFaqDetail = () => {
+    const { faq } = props.data;
       if (faq) {
         return (
           <React.Fragment>
@@ -13,14 +14,12 @@ export class FaqDetail extends Component {
           </React.Fragment>
         )
       }
-    };
-  render() {
-    return(
-      <div id="faq-detail">
-        { this.displayFaqDetail() }
-      </div>
-    )
-  }
+    }
+  return(
+    <div id="faq-detail">
+      { displayFaqDetail() }
+    </div>
+  );
 };
 
 export default graphql(getFaqDetailQuery,{

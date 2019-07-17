@@ -1,12 +1,12 @@
-import React,  { Component } from 'react';
+import React from 'react';
 import { graphql } from 'react-apollo';
 import { getHomepageQuery } from '../queries/queries';
 import './Homepage.css';
 
-export class Homepage extends Component {
-  homepageContent() {
-    const { data: { loading, homepage } } = this.props;
-    if(loading){
+export const Homepage = (props) => {
+  const homepageContent = () => {
+    const { data: { loading, homepage } } = props;
+    if (loading) {
       return ( <p>Loading...</p> )
     }
     return (
@@ -15,21 +15,18 @@ export class Homepage extends Component {
         <h4>{homepage.subheading}</h4>
         <img
           src={homepage.heroImageUrl}
-          alt="Hero-Image"
+          alt="Hero"
           className="hero-image"
         />
         <a href="/faq" className="learn-more">Learn more...</a>
       </div>
       )
-    };
-
-  render() {
+    }
     return(
       <div >
-        { this.homepageContent() }
+        { homepageContent() }
       </div>
-    )
-  }
+  )
 };
 
 export default graphql( getHomepageQuery )( Homepage );
