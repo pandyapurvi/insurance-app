@@ -1,17 +1,16 @@
 import React,  { Component } from 'react';
 import { graphql } from 'react-apollo';
 import { getFaqDetailQuery } from '../queries/queries';
-import styles from './FaqDetail.css';
-
+import './FaqDetail.css';
 export class FaqDetail extends Component {
   displayFaqDetail() {
     const { faq } = this.props.data;
-      if( faq ) {
+      if (faq) {
         return (
-          <div>
+          <React.Fragment>
             <h4>{ faq.title }</h4>
-            <p>{ faq.body }</p>
-          </div>
+            <div dangerouslySetInnerHTML={{__html: faq.body}} />
+          </React.Fragment>
         )
       }
     };
