@@ -3,7 +3,7 @@ import { graphql } from 'react-apollo';
 import { getHomepageQuery } from '../queries/queries';
 import styles from './Homepage.css';
 
-class Homepage extends Component {
+export class Homepage extends Component {
   homepageContent() {
     const { data: { loading, homepage } } = this.props;
     if(loading){

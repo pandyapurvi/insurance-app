@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Navbar.css';
 
-const Navbar = () => (
+export const Navbar = () => (
     <div>
     <ul className="nav">
       <li><a href="/">HomePage</a></li>
