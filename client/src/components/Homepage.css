@@ -1,0 +1,112 @@
+.homepage-container {
+  color: #444;
+  text-align: center;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translate(-10rem);
+    }
+    80%{
+        transform: translate(2rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+h1{
+display: block;
+font-size: 3rem;
+font-weight: 400;
+letter-spacing: 0.5rem;
+animation-name: moveInLeft;
+animation-duration: 1.5s;
+animation-timing-function: ease-out;
+color: red;
+text-transform: uppercase;
+margin-bottom: 2rem;
+font-family: 'Literata', serif, sans-serif;
+margin-top: 1rem;
+text-align: center;
+}
+h4 {
+  font-family: 'Satisfy', cursive, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+img {
+  height: 30rem;
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px rgba(0,0,0, 0.5);
+  margin-bottom: 1rem;
+}
+.learn-more:link,
+.learn-more:visited {
+  display: block;
+  height: 6vh;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .2s;
+  font-size: 1rem;
+  border-style:double;
+  color: black;
+  width: 25rem;
+  text-align: center;
+}
+.learn-more:hover {
+  border-style: ridge;
+  background-color: #000;
+  color: #fff;
+}
+
+@media screen and (max-width: 900px) {
+  img {
+    height: 18rem;
+  }
+  h1{
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  }
+  .learn-more:link,
+  .learn-more:visited {
+    height: 8vh;
+    color: #fff;
+    width: 15rem;
+    background-color: #000;
+  }
+  .learn-more:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  img {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    height: 12rem;
+  }
+  h1{
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  }
+  .learn-more:link,
+  .learn-more:visited {
+    height: 8vh;
+    color: #fff;
+    width: 15rem;
+    background-color: #000;
+  }
+  .learn-more:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}

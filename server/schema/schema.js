@@ -9,11 +9,25 @@ const {
   GraphQLList
 } = graphql;
 
+const homepages = require('../data/homepage.json');
+const faqs = require('../data/faq.json');
+
+const HomepageType = new GraphQLObjectType({
+  name: 'Homepage',
+  fields: () => ({
+    id: { type: GraphQLID },
+    heading: { type: GraphQLString },
+    subheading: { type: GraphQLString },
+    heroImageUrl: { type: GraphQLString }
+  })
+});
+
 const FaqType = new GraphQLObjectType({
   name: 'Faq',
   fields: () => ({
-    title: {type: GraphQLString},
-    body: {type: GraphQLString}
+    id: { type: GraphQLID },
+    title: { type: GraphQLString },
+    body: { type: GraphQLString }
   })
 });
 
@@ -22,9 +36,22 @@ const RootQuery = new GraphQLObjectType({
   fields: {
     faq: {
       type: FaqType,
-      args: {id:{type:GraphQLString}},
-      resolve(parent, args){
-        //Here get the data from DB/ JSON file
+      args: { id:{type:GraphQLID }},
+      resolve( parent, args ){
+        return _.find( faqs, {id:args.id} );
+      }
+    },
+    homepage: {
+      type: HomepageType,
+      args: { id: {type:GraphQLID} },
+      resolve( parent, args ){
+        return _.find( homepages, {id:args.id} );
+      }
+    },
+    faqs: {
+      type: new GraphQLList( FaqType ),
+      resolve( parent,args ){
+        return faqs;
       }
     }
   }
