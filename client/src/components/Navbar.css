@@ -6,7 +6,6 @@ ul.nav {
   height: 100%;
   overflow: auto;
 }
-
 ul.nav li a {
   display: block;
   color: #fff;
@@ -14,29 +13,26 @@ ul.nav li a {
   text-decoration: none;
   float: left;
 }
-
 ul.nav li a.active {
   background-color: #4CAF50;
   color: white;
 }
-
 ul.nav li a:hover {
   background-color: #fff;
   color: #000;
   border-style:double;
   text-decoration: none;
 }
-
 .active {
   background-color: #4CAF50;
 }
+
 @media screen and (max-width: 900px) {
   ul {
     width: 100%;
     height: auto;
     position: relative;
   }
-
   ul.nav li a {
     float: left;
     padding: 15px;
@@ -49,7 +45,7 @@ ul.nav li a:hover {
     text-align: center;
     color: black;
     border-style:double;
-    padding: 0.5rem 3.7rem;
+    padding: 0.5rem 3.6rem;
   }
   ul.nav{
     background-color: #fff;

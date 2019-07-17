@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower|Literata|Satisfy&display=swap');
-font-family: 'Indie Flower', cursive;
 
 body {
   background-color: #eee;
@@ -8,12 +7,3 @@ body {
 li {
   list-style: none;
 }
-
-#main {
-  width: 100%;
-  position: relative;
-}
-/* .faq-component {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-} */

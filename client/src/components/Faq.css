@@ -10,7 +10,6 @@ h1.faq-header{
   background-color: #000;
   padding: 30px;
   overflow: auto;
-  /* box-shadow: -2px -3px 5px rgba(0,0,0,0.3); */
   box-sizing: border-box;
   color: #fff;
   text-align: left;
@@ -27,7 +26,9 @@ h1.faq-header{
 }
 
 @media screen and (max-width: 900px) {
-  /* h1.faq-header */
+  h1.faq-header {
+    font-size: 1.7rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -37,9 +38,7 @@ h1.faq-header{
   #faq-list{
     width: 100%;
     height: auto;
-  
-  padding: 10px;
-  font-size: 1.3rem;
-
+    padding: 10px;
+    font-size: 1.3rem;
   }
 }
