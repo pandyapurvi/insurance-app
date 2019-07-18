@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'react-apollo';
 import { getHomepageQuery } from '../queries/queries';
+import PropTypes from 'prop-types';
 import './Homepage.css';
 
 export const Homepage = (props) => {
@@ -28,5 +29,16 @@ export const Homepage = (props) => {
       </div>
   )
 };
+Homepage.propTypes = {
+  data: PropTypes.shape({
+    loading: PropTypes.bool.isRequired,
+    homepage: PropTypes.shape({
+      heading: PropTypes.string.isRequired,
+      subheading: PropTypes.string.isRequired,
+      heroImageUrl: PropTypes.string.isRequired,
+    })
+  })
+};
 
 export default graphql( getHomepageQuery )( Homepage );
+

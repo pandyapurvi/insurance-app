@@ -15,7 +15,7 @@ export const Faq = (props) => {
     }
     return faqs.map(faq => {
       return (
-        <li className="faq-list" key={faq.id} onClick={e => setSelected(faq.id) } >
+        <li className="faq-list" key={faq.id} onClick={ e => setSelected(faq.id) } >
         { faq.title }
         </li>
       );

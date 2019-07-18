@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'react-apollo';
 import { getFaqDetailQuery } from '../queries/queries';
+import PropTypes from 'prop-types';
 import './FaqDetail.css';
 
 export const FaqDetail = (props) => {
@@ -20,6 +21,13 @@ export const FaqDetail = (props) => {
       { displayFaqDetail() }
     </div>
   );
+};
+
+FaqDetail.propTypes = {
+  data: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
+  })
 };
 
 export default graphql(getFaqDetailQuery,{
